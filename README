@@ -1,0 +1,28 @@
+# Kanban - Indústria Alimentícia
+
+## Descrição
+Aplicação web para gerenciamento de tarefas em modelo Kanban simples (a fazer, fazendo, pronto). Permite CRUD de usuários e tarefas, com integração entre setores.
+
+## Tecnologias
+- Frontend: HTML, CSS (Bootstrap), JavaScript
+- Backend: PHP
+- Banco: MySQL
+
+## Estrutura do Repositório
+- /docs: DER.jpg, CasoUso.jpg
+- /sql: kanban.sql (script do banco)
+- /src: index.php, cadastro_usuario.php, cadastro_tarefa.php, gerenciamento.php
+- README.md
+
+## Instalação
+1. Importe o script SQL no MySQL.
+2. Configure a conexão em config.php.
+3. Execute em um servidor local (ex.: XAMPP).
+
+## Funcionalidades
+- Cadastro de usuários e tarefas.
+- Gerenciamento visual em colunas.
+- Validações e mensagens de sucesso.
+
+## Autor
+Ícaro Botelho
