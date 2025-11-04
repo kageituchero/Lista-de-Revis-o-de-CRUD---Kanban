@@ -10,8 +10,8 @@
         <div class="container">
             <a class="navbar-brand" href="#">Kanban</a>
             <div class="navbar-nav">
-                <a class="nav-link" href="cadastro_usuario.php">Cadastrar Usuário</a>
-                <a class="nav-link" href="cadastro_tarefa.php">Cadastrar Tarefa</a>
+                <a class="nav-link" href="cadastro_de_usuários.php">Cadastrar Usuário</a>
+                <a class="nav-link" href="cadastro_de_tarefas.php">Cadastrar Tarefa</a>
                 <a class="nav-link" href="gerenciamento.php">Gerenciar Tarefas</a>
             </div>
         </div>

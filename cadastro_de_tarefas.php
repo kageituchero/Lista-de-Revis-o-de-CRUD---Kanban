@@ -1,5 +1,5 @@
 <?php
-$pdo = new PDO('mysql:host=localhost;dbname=kanban_industria', 'root', '');
+$pdo = new PDO('mysql:host=localhost;dbname=kanban_industria', 'root', 'root');
 $usuarios = $pdo->query("SELECT id, nome FROM Usuario")->fetchAll(PDO::FETCH_ASSOC);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>
-        <a href="index.php" class="btn btn-secondary mt-3">Voltar ao Menu</a>
+        <a href="kanban.php" class="btn btn-secondary mt-3">Voltar ao Menu</a>
     </div>
 </body>
 </html>

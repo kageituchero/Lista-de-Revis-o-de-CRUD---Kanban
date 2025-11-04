@@ -1,12 +1,11 @@
 <?php
-$pdo = new PDO('mysql:host=localhost;dbname=kanban_industria', 'root', '');
+$pdo = new PDO('mysql:host=localhost;dbname=kanban_industria', 'root', 'root');
 
 if (isset($_GET['editar'])) {
     $id = $_GET['editar'];
     $tarefa = $pdo->prepare("SELECT * FROM Tarefa WHERE id = ?");
     $tarefa->execute([$id]);
     $t = $tarefa->fetch(PDO::FETCH_ASSOC);
-    // Redirecionar para cadastro_tarefa.php com dados (implemente via sessão ou URL params)
     header("Location: cadastro_tarefa.php?editar=1&id={$t['id']}&id_usuario={$t['id_usuario']}&descricao={$t['descricao']}&nome_setor={$t['nome_setor']}&prioridade={$t['prioridade']}");
 }
 
@@ -63,7 +62,6 @@ foreach ($tarefas as $t) $colunas[$t['status']][] = $t;
                                     </select>
                                     <button type="submit" name="alterar_status" class="btn btn-sm btn-primary">Alterar</button>
                                 </form>
-                                <a href="?editar=<?php echo $t['id']; ?>" class="btn btn-sm btn-warning">Editar</a>
                                 <button onclick="confirmarExclusao(<?php echo $t['id']; ?>)" class="btn btn-sm btn-danger">Excluir</button>
                             </div>
                         </div>
@@ -71,7 +69,7 @@ foreach ($tarefas as $t) $colunas[$t['status']][] = $t;
                 </div>
             <?php endforeach; ?>
         </div>
-        <a href="index.php" class="btn btn-secondary mt-3">Voltar ao Menu</a>
+        <a href="kanban.php" class="btn btn-secondary mt-3">Voltar ao Menu</a>
     </div>
 </body>
 </html>

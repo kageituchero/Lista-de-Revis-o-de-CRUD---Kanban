@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $pdo = new PDO('mysql:host=localhost;dbname=kanban_industria', 'root', '');
+    $pdo = new PDO('mysql:host=localhost;dbname=kanban_industria', 'root', 'root');
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $stmt = $pdo->prepare("INSERT INTO Usuario (nome, email) VALUES (?, ?)");
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>
-        <a href="index.php" class="btn btn-secondary mt-3">Voltar ao Menu</a>
+        <a href="kanban.php" class="btn btn-secondary mt-3">Voltar ao Menu</a>
     </div>
 </body>
 </html>
